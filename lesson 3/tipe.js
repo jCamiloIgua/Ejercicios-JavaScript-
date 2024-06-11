@@ -10,3 +10,11 @@ console.log(typeof edad);
 nombre = 12.7;
 
 console.log(typeof nombre);
+
+let camion = {
+    marca: "Chevrolet",
+    modelo: "Camaro",
+    tamaño: 20
+}
+
+console.log(typeof camion);

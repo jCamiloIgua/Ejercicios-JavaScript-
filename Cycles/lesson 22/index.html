@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentencia break</title>
+</head>
+<body>
+    <h2>Sentencia break</h2>
+    <script>
+        
+        for(let cont = 0; cont <= 10; cont++ ){
+            //solo trae los tres primeros numeros pares y sale
+            //del ciclo
+            if(cont % 2 == 0){
+                console.log(cont);
+                if(cont == 4){
+                    break;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

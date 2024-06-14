@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclo do while</title>
+</head>
+<body>
+    <h2>Ciclo do while en JavaScript</h2>
+    <p id="ir"> </p>
+    <script>
+        let texto = " ";
+        let cont = 0;
+
+        do{
+            texto += "<br> El numero es " + cont;
+            cont++;
+        }while(cont < 10);
+
+        document.getElementById("ir").innerHTML = texto;
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementsByClassName</title>
+</head>
+<body>
+    
+    <h1 class="moleculas">Soy un Proton</h1>
+    <h2 class="moleculas">Soy un Electron</h2>
+    <h3 class="moleculas">Soy un Neutron</h3>
+
+    <script>
+        let moleculas = document.getElementsByClassName("moleculas");
+
+        console.log(moleculas.length);
+        console.log("<<Contenido de titulos>>");
+        
+            for(let i =0; i< moleculas.length; i++){
+                console.log(moleculas[i].innerHTML);
+            }
+    </script>
+</body>
+</html>

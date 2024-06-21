@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementsByTagName</title>
+</head>
+<body>
+    <!--Se usa el getElementByTagName seleccionar
+    un elemento no por el id si no por la etiqueta-->
+
+    <p>Primer Parrafo</p>
+    <p>Segundo Parrafo</p>
+    <p>Tercer Parrafo</p>
+
+    <script>
+        let parrafos = document.getElementsByTagName("p");
+        console.log(parrafos.length);//cantidad de etiquetas p
+
+        console.log("<<Contenido de etiquetas p>>");
+        for(let i = 0; i < parrafos.length; i++){
+            console.log(parrafos[i].innerHTML);
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>querySelectorAll</title>
+</head>
+<body>
+    <!--Se usa para seleccionar elementos que cumplan
+    con unas condiciones como una etiqueta p que tenga 
+    una clase rojo (ETIQUETA Y CLASE)-->
+    <h1 class="titulo">titulo 1</h1>
+    <h1 class="titulosy">titulo 2</h1>
+    <h1 class="titulo">titulo 3</h1>
+    <p id="parrafo">Soy un parrafo</p>
+
+    <script>
+
+        let titulo = document.querySelectorAll("h1.titulo");
+        console.log(titulo.length);
+
+        for(let i = 0; i < titulo.length; i++){
+            console.log(titulo[i].innerHTML);
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accediendo al DOM</title>
+</head>
+<body>
+    <h1 id="cabecera">Ejemplo Dom con JavaScript</h1>
+    
+    <p id="parrafo">parrafo</p>
+    <script>
+        //el id en las etiquetas permite especificar el
+        //contenido a modificar
+
+        //innerHtml trae lo que existe dentro de la etiqueta
+        let cabecera = document.getElementById("cabecera");
+        console.log(cabecera);//trae lo de la etiqueta
+        //no tome el h1
+        //dar un nuevo valor a la etiqueta
+        cabecera.innerHTML = "El nuevo valor";
+        //solo el contenido mostrar
+        console.log(cabecera.innerHTML);
+
+
+
+        let parrafo = document.getElementById("parrafo").innerHTML;
+        console.log(parrafo);//trae lo de la etiqueta
+    </script>
+</body>
+</html>

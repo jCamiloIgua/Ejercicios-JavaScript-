@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <form id = "formulario">
+
+        nombre<input type="text" name="nombre" value="Camilo">
+        <br>
+        apellido<input type="text" name="apellido" value="Igua">
+        <br>
+    </form>
+    <!--BOTON CON EVENTO ONCLICK AL HACER UN CLIC-->
+    <!--Evento llama a una funcion-->
+    <button onclick="mostrarValores()">mostrar</button>
+    <br>
+
+    <!--Este div nos nomstrara el retorno de la funcion-->
+    <di id ="valores"></di>
+    <script>
+        function mostrarValores(){
+            //estamos con .forms apuntando al nombre del formulario
+            //esta variable contiene todo, el formulario
+            //se almacena un arreglo name
+            let formulario = document.forms['formulario'];
+
+            let texto = " ";
+            //elemento(value) del formulario //alias
+            for(let elemento of formulario){
+                texto+= elemento.value + '<br/>';//texto guarda los valores del value (campo) del formulario
+            }
+
+            //se manda al div la informacion de la variable
+            document.getElementById("valores").innerHTML = texto;
+        }
+
+    </script>
+</body>
+</html>

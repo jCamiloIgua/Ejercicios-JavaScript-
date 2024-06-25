@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambio de valor de atributos HTML</title>
+</head>
+<body>
+
+    <h1>Cambio de imagen con JS</h1>
+
+    <button onclick="cambio()">Mostrar imagen</button>
+
+    <img id="imagen" src="imagen1.jpg" alt="anime">
+    
+    <script>
+
+        function cambio(){
+            document.getElementById("imagen").src = "imagen2.jpeg";//cambiar imagen del src
+            document.getElementById("imagen").alt = "anime2";
+            document.getElementById("imagen").title = "anime2";
+            document.getElementById("imagen").width = "200";
+            document.getElementById("imagen").height = "200";
+            document.getElementById("imagen").style.border = "2px solid black";
+            document.getElementById("imagen").style.borderRadius = "50%";
+            document.getElementById("imagen").style.boxShadow = "10px 10px 10px black";
+            document.getElementById("imagen").style.cursor = "pointer";
+            document.getElementById("imagen").style.transition = "1s";
+            document.getElementById("imagen").style.transform = "rotate(360deg)";
+        }
+    </script>
+</body>
+</html>

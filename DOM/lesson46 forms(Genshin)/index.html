@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personajes de Genshin Impact</title>
+</head>
+<body>
+    <h1>Personajes favoritos de Genshin Impact</h1>
+    <p>Escribe los nombres de tus personajes favoritos:</p>
+
+    <form id = "personajes">
+        Nombre Personaje 1: <input type ="text" name = "nombre" value = "Diona">
+        <br>
+        Vision Personaje 1: <input type = "text" name = "vision" value="Cryo ">
+        <br>
+        Nombre Personaje 2: <input type ="text" name = "nombre" value = "Furina">
+        <br>
+        Vision Personaje 2: <input type = "text" name = "vision" value="Hydro">
+        <br>
+        Nombre Personaje 3: <input type ="text" name = "nombre" value = "Hu Tao">
+        <br>
+        Vision Personaje 3: <input type = "text" name = "vision" value="Pyro">
+        <br>
+    </form>
+    <br>
+    <button onclick="mostrarPersonajes()">Mostrar Informacion</button>
+    <br>
+
+    <p>Escribe las dos mejores armas del juego: </p>
+
+    <form id = "armasPerso">
+        Tipo de Arma: <input type="text" name = "tipo" value="Arco">
+        Nombre de Arma: <input type = "text" name="nombreAr" value="Favonius">
+    </form>
+    <br>
+    <button onclick="mostrarArmas()">Mostrar Armas</button>
+    <br>
+
+    <h2>Datos Personajes</h2>
+    <p>Personajes informacion: </p>
+    <div id="personajesInfo"></div>
+    <br>
+
+    <h2>Datos de las dos Armas Favoritas</h2>
+    <div id="armasInf"></div>
+    
+    <script>
+    //con un id es facil enviar datos el DOM
+        function mostrarPersonajes(){
+            let formulario = document.forms['personajes'];
+            let info = " ";
+            let contador = 0;//contar numero de pesonajes
+            //recorre cada valor del formulario su value
+            for(let infoPersonaje of formulario){
+                contador++;
+                //console.log(infoPersonaje.value);//todo el arreglo con los datos ingresados
+                //se concatena con un salto de linea
+                if(contador % 2 == 0){//par se muestra la vision
+                    info += "Vision: " + infoPersonaje.value + '<br/>';
+                }else{//se muestra el nombre
+                    info += "Personaje: " + infoPersonaje.value + '<br/>';//salto de linea
+                }
+            }
+            document.getElementById("personajesInfo").innerHTML = info;//se le pasa el arreglo con toda informacion
+        }
+
+        //se usa sin bucle
+        function mostrarArmas(){
+            let formulario = document.forms['armasPerso'];
+            let infoAR = " ";
+            //guardamos en variables los values se declaran de una
+            let tipo = formulario['tipo'];
+            let nombre = formulario['nombreAr'];
+
+            infoAR = "Tipo: " + tipo.value + '<br/>' + "Nombre: " + nombre.value;
+            document.getElementById("armasInf").innerHTML = infoAR;
+        }
+
+    </script>
+
+</body>
+</html>

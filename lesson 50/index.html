@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asociar Eventos</title>
+</head>
+<body>
+    <h1 id="titulo"> Manejo del Dom</h1>
+    <br>
+    <p id="oprimir">Contenido al mostrar al oprimir!!</p>
+    <div id="contenido"></div>
+    <script>
+        document.getElementById("titulo").onclick = cambiarTexto;
+        function cambiarTexto(){
+            document.getElementById("titulo").innerHTML = "Nuevo Titulo";
+        }
+
+        document.getElementById("oprimir").onclick = mostrarTexto;
+
+        function mostrarTexto(){
+            document.getElementById("contenido").innerHTML = "Contenido al mostrar";
+        }
+    </script>
+</body>
+</html>

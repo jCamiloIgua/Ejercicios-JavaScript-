@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento Onload</title>
+</head>
+<body onload="myFunction()">
+    <!--Se ejecuta inmediatamente despues de que haya cargado una pagina-->
+    <h1>Evento Onload</h1>
+    <br>
+
+    <div id="mostrar"></div>
+    <script>
+        function myFunction(){
+            alert("Se cargo la pagina");
+
+            let texto = " ";
+
+            if(navigator.cookieEnabled){
+                texto = "Las cookies estan activas";
+            }else{
+                texto = "Las cookies no estan activas";
+            }
+            document.getElementById("mostrar").innerHTML = texto;
+        }
+        
+    </script>
+
+</body>
+</html>

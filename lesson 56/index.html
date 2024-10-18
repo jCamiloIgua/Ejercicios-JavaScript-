@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addEventListener</title>
+</head>
+<body>
+    <!--Sirve para llamar varios eventos se quita el 
+    on de los eventos-->
+
+    <h1>Eventos de mouse</h1>
+    <input type="text" id="nombre">
+
+    <script>
+
+        document.getElementById("nombre").addEventListener("focus", cambiar);
+        document.getElementById("nombre").addEventListener("blur", regresar);
+
+        function cambiar(dato){
+            let componente = dato.target;
+
+            componente.style.backgroud = "yellow";
+        }
+
+        function regresar(dato){
+            let componente = dato.target;
+            componente.style.backgroud= "cyan";
+        }
+
+    </script>
+</body>
+</html>

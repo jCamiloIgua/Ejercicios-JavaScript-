@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onmouseover y onmouseout</title>
+</head>
+<body>
+    <!--El raton sobre y el raton fuera-->
+
+    <!--onmouseover sobre-->
+    <!--onmouseout afuera-->
+    <!--this referencia al elemento etiqueta-->
+
+    <h1 onmouseover="rojo(this)" onmouseout="azul(this)">Hola mundo</h1>
+
+
+    <script>
+
+        function rojo(titulo){
+            titulo.style.color = "red";
+        }
+
+        function azul(titulo){
+            titulo.style.color = "blue";
+        }
+    </script>
+</body>
+</html>

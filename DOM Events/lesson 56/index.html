@@ -13,19 +13,19 @@
     <input type="text" id="nombre">
 
     <script>
-
+        //En addEventListener() adentro se colocan los eventos " "
         document.getElementById("nombre").addEventListener("focus", cambiar);
         document.getElementById("nombre").addEventListener("blur", regresar);
 
-        function cambiar(dato){
-            let componente = dato.target;
+        function cambiar(dato){ //target es como un this
+            let componente = dato.target;//referencia a todo el codigo que compone el input
 
-            componente.style.backgroud = "yellow";
+            componente.style.background = "yellow";
         }
 
         function regresar(dato){
             let componente = dato.target;
-            componente.style.backgroud= "cyan";
+            componente.style.background= "cyan";
         }
 
     </script>
